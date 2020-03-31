@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gun Violence Allocation Graphic</title>
+    <link rel="stylesheet" href="../static/graphic.css">
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../static/mapmaker.js"></script>
+    <script src="../static/submit.js"></script>
+</head>
+<body onload="renderMap('chicago')">
+    <div class="main" id="mainOptions">
+        <div class="optionContainer" id="optionHeader">
+            <h1>Please Select from the Options Below:</h1>
+            <h3>These will be used to create the Risk Score visualizations</h3>
+        </div>
+        <div class="mainSelections" id="choices">
+            <div id="leftSelection">
+                <div id="inputContainer">
+                    <h3>Input Volunteer Variables Here</h3>
+                    <h4>Number of Total Available Volunteers</h4>
+                    <div style="width: 25%; margin: auto;">
+                        <input class="dataInput" id="totalVar">
+                    </div>
+                    <h4>Ideal Ratio of Volunteers per Geographic Division</h4>
+                    <div style="width: 25%; margin: auto;">
+                        <input class="dataInput" id="idealVar">
+                    </div>
+                </div>
+            </div>
+            <div id="rightSelection">
+                <h3>Enter in Risk Score Variables Here</h3>
+                <div class="choiceContainer">
+                    <h4>Would You Like to Include Homicides?</h4>
+                    <div style="width: 25%; margin: -4% auto">
+                        <input class="rsVar" id="homicideVar">
+                    </div>
+                </div>
+                <div class="choiceContainer">
+                    <h4>Would You Like to Include Shootings?</h4>
+                    <div style="width: 25%; margin: -4% auto">
+                        <input class="rsVar" id="shootingVar">
+                    </div>
+                </div>
+                <div class="choiceContainer">
+                    <h4>Would You Like to Include Census Data?</h4>
+                    <div style="width: 25%; margin: -4% auto">
+                        <input class="rsVar" id="censusVar">
+                    </div>
+                </div>
+                <div class="choiceContainer">
+                    <h4>Would You Like to Include Current Volunteer Data?</h4>
+                    <div style="width: 25%; margin: -4% auto">
+                        <input class="rsVar" id="volunteerVar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="optionContainer" id="enterButton">
+            <div style="width: 33%; margin: 1.5% auto;">
+                <button id="submitButton" onclick="submitInformation()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="main" id="mainGraphic" style="display: none;">
+        <div class="optionContainer">
+            <h1>Chicago Gun Violence Allocation</h1>
+            <h2>_</h2>
+        </div>
+        <div class="graphic" id="container"></div>
+        <div class="optionContainer">
+            <div class="geoOption" id="zipcodes" onclick="renderMap('zipcodes')">
+                <div class="geoOptionText">Zipcodes</div>
+            </div>
+            <div class="geoOption" id="districts" onclick="renderMap('districts')">
+                <div class="geoOptionText">Districts</div>
+            </div>
+            <div class="geoOption" id="sectors" onclick="renderMap('sectors')">
+                <div class="geoOptionText">Sectors</div>
+            </div>
+            <div class="geoOption" id="beats" onclick="renderMap('beats')">
+                <div class="geoOptionText">Beats</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

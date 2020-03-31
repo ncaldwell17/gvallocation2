@@ -1,0 +1,123 @@
+.graphic {
+    border: 1px solid black;
+    width: 800px;
+    margin: auto;
+}
+
+h1 {
+    left: 10px;
+    font-size: 1.3em;
+    font-weight: 100;
+    text-align: center;
+}
+
+h2 {
+    left: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1em;
+}
+
+h4 {
+    text-align: center;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.highlight {
+    fill: steelblue;
+    background-color: steelblue;
+}
+
+.blank {
+    fill: #ccc;
+}
+
+.optionContainer {
+    height: 75px;
+    width: 800px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.geoOption {
+    width: 25%;
+    height: 75px;
+    float: left;
+    background-color: #ccc;
+}
+
+.geoOption:hover {
+    background-color: steelblue;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.geoOptionText {
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 20px;
+}
+
+.main {
+    margin-top: 50px;
+}
+
+.mainSelections {
+    height: 500px;
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#leftSelection {
+    float: left;
+    width: 50%;
+    background-color: lavender;
+    height: 100%;
+}
+
+#rightSelection {
+    float: left;
+    width: 50%;
+    background-color: thistle;
+    height: 100%;
+}
+
+#inputContainer {
+    border: 1px solid black;
+    margin: 25% auto;
+    height: 300px;
+    width: 80%;
+}
+
+.dataInput {
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    font-size: 1.1em;
+}
+
+.choiceContainer {
+    width: 80%;
+    margin: 7% auto;
+    height: 75px;
+    border: 1px solid black;
+}
+
+.rsVar {
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    font-size: 1.1em;
+}
+
+#submitButton {
+    width: 100%;
+    height: 50px;
+    margin: 1.5% auto;
+}
