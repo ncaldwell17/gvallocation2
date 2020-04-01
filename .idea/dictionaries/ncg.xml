@@ -2,6 +2,7 @@
   <dictionary name="ncg">
     <words>
       <w>gunicorn</w>
+      <w>makemap</w>
     </words>
   </dictionary>
 </component>
