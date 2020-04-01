@@ -5,7 +5,7 @@ function renderMap(input) {
     const mapDiv = document.getElementById("container");
     const svg = d3.select(mapDiv).append("svg");
 
-    $.getJSON(`resources/${input}.json`, function (data) {
+    $.getJSON(`static/resources/${input}.json`, function (data) {
 
 
         // Width & Height of the Whole Visualization
