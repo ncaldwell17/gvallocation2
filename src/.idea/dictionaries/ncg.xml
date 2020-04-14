@@ -2,6 +2,7 @@
   <dictionary name="ncg">
     <words>
       <w>albers</w>
+      <w>chloropleth</w>
       <w>geojson</w>
       <w>zipcode</w>
       <w>zipcodes</w>

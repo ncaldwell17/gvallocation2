@@ -8,9 +8,52 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../static/makemap.js"></script>
     <script src="../static/submit.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        body {
+            background-color: black;
+        }
+        .header-content {
+            min-height: 50px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            background-color: #373737;
+            border: 1px solid #565656;
+        }
+        .sidebar-content {
+            min-height: 50px;
+            margin-bottom: 10px;
+            background-color: #373737;
+            border: 1px solid #565656;
+        }
+        .main-content {
+            min-height: 650px;
+            background-color: #373737;
+            border: 1px solid #565656;
+        }
+        .graphicOptions {
+            min-height: 30px;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .optionText {
+            min-height: 30px;
+            background-color: orangered;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
 </head>
-<body onload="renderMap('chicago')">
-    <div class="main" id="mainOptions">
+<!-- <body onload="renderMap('chicago')"> -->
+<body onload="renderChloropleth()">
+    <div class="main" id="mainOptions" style="display: none">
         <div class="optionContainer" id="optionHeader">
             <h1>Please Select from the Options Below:</h1>
             <h3>These will be used to create the Risk Score visualizations</h3>
@@ -63,7 +106,8 @@
             </div>
         </div>
     </div>
-    <div class="main" id="mainGraphic" style="display: none;">
+
+    <div class="main" id="mainGraphic" style="display: none">
         <div class="optionContainer">
             <h1>Chicago Gun Violence Allocation</h1>
             <h2>_</h2>
@@ -84,5 +128,51 @@
             </div>
         </div>
     </div>
+
+    <div class="container mt-lg-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="header-content">
+                    <h1>Gun Violence Outreach Allocation Dashboard</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sidebar-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="graphicOptions">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="optionText">Select a Geographic Division: </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="optionText">Drop Down Menu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="graphicOptions"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="graphicOptions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="main-content" id="graphicContainer"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="main-content"></div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
