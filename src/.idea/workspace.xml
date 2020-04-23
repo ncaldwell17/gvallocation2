@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7608503f-459c-409c-ace6-f740490c2c91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/dictionaries/ncg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dictionaries/ncg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ncg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ncg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/graphic.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/graphic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/makemap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/makemap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/graphic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/graphic.html" afterDir="false" />
-    </list>
+    <list default="true" id="7608503f-459c-409c-ace6-f740490c2c91" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +63,7 @@
       <workItem from="1585537378575" duration="6263000" />
       <workItem from="1585604983093" duration="8116000" />
       <workItem from="1586847689674" duration="5048000" />
+      <workItem from="1587670059386" duration="4000" />
     </task>
     <servers />
   </component>
