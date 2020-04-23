@@ -2,12 +2,19 @@ const color = d3.scaleThreshold()
     .domain([0, 50, 100, 150, 200])
     .range(["#f2f0f7", "#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]);
 
-function renderChloropleth() {
 
+function renderChloropleth(opt) {
+
+    d3.selectAll("#graphicContainer > *").remove();
+
+    document.getElementById('policeBeatsOption').classList.remove('active');
+    document.getElementById('zipcodesOption').classList.remove('active');
+    document.getElementById(`${opt}Option`).classList.add('active');
     let mapDiv = document.getElementById("graphicContainer");
     let svg = d3.select(mapDiv).append("svg");
+    const filepath = `../static/resources/scores/${opt}_ordered.json`;
 
-    $.getJSON('../static/resources/scores/ordered_hpb.json', function (data) {
+    $.getJSON(`${filepath}`, function (data) {
 
         // alter SVG
         svg
@@ -55,6 +62,7 @@ function handleMouseOver(d, i) { //add interactivity here
     // use D3 to select the element, change its color and size
     d3.select(this).attr("fill", "darkorange");
     // specify where to put label or text or additional features
+    document.getElementById("infoDisplay").innerHTML = create_markup(d);
 
 }
 
@@ -65,8 +73,17 @@ function handleMouseOut(d, i) { //add interactivity here
         return color(d.properties.count_homicides);
     });
     // specify what to do with the label or text or additional features
+    document.getElementById("infoDisplay").innerHTML = "";
 
+}
 
+function create_markup(data) {
+    const markup = `
+    <div class='graybox'>
+        <h2>${data.properties.BEAT_ID}</h2>
+    </div>
+`;
+    return markup
 }
 
 

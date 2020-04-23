@@ -19,146 +19,97 @@
         body {
             background-color: black;
         }
-        .header-content {
-            min-height: 50px;
-            margin-top: 20px;
-            margin-bottom: 5px;
-            background-color: #373737;
-            border: 1px solid #565656;
+
+        .geoOption {
+            height: 30px;
+            padding-top: 2px;
         }
-        .sidebar-content {
-            min-height: 50px;
-            margin-bottom: 10px;
-            background-color: #373737;
-            border: 1px solid #565656;
+        .dropdown-item:hover {
+            cursor: pointer;
         }
-        .main-content {
-            min-height: 650px;
-            background-color: #373737;
-            border: 1px solid #565656;
+        .active {
+            color: #54278f;
         }
-        .graphicOptions {
-            min-height: 30px;
-            margin-top: 10px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        .optionText {
-            min-height: 30px;
-            background-color: orangered;
-            text-align: center;
-            font-size: 20px;
-        }
+
+
+
     </style>
 </head>
 <!-- <body onload="renderMap('chicago')"> -->
-<body onload="renderChloropleth()">
-    <div class="main" id="mainOptions" style="display: none">
-        <div class="optionContainer" id="optionHeader">
-            <h1>Please Select from the Options Below:</h1>
-            <h3>These will be used to create the Risk Score visualizations</h3>
-        </div>
-        <div class="mainSelections" id="choices">
-            <div id="leftSelection">
-                <div id="inputContainer">
-                    <h3>Input Volunteer Variables Here</h3>
-                    <h4>Number of Total Available Volunteers</h4>
-                    <div style="width: 25%; margin: auto;">
-                        <input class="dataInput" id="totalVar">
-                    </div>
-                    <h4>Ideal Ratio of Volunteers per Geographic Division</h4>
-                    <div style="width: 25%; margin: auto;">
-                        <input class="dataInput" id="idealVar">
-                    </div>
-                </div>
-            </div>
-            <div id="rightSelection">
-                <h3>Enter in Risk Score Variables Here</h3>
-                <div class="choiceContainer">
-                    <h4>Would You Like to Include Homicides?</h4>
-                    <div style="width: 25%; margin: -4% auto">
-                        <input class="rsVar" id="homicideVar">
-                    </div>
-                </div>
-                <div class="choiceContainer">
-                    <h4>Would You Like to Include Shootings?</h4>
-                    <div style="width: 25%; margin: -4% auto">
-                        <input class="rsVar" id="shootingVar">
-                    </div>
-                </div>
-                <div class="choiceContainer">
-                    <h4>Would You Like to Include Census Data?</h4>
-                    <div style="width: 25%; margin: -4% auto">
-                        <input class="rsVar" id="censusVar">
-                    </div>
-                </div>
-                <div class="choiceContainer">
-                    <h4>Would You Like to Include Current Volunteer Data?</h4>
-                    <div style="width: 25%; margin: -4% auto">
-                        <input class="rsVar" id="volunteerVar">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="optionContainer" id="enterButton">
-            <div style="width: 33%; margin: 1.5% auto;">
-                <button id="submitButton" onclick="submitInformation()">Submit</button>
-            </div>
-        </div>
-    </div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #54278f">
+        <a class="navbar-brand" href="#">
+            <div id="gvLogo"></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="main" id="mainGraphic" style="display: none">
-        <div class="optionContainer">
-            <h1>Chicago Gun Violence Allocation</h1>
-            <h2>_</h2>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: white;">Chicago Gun Violence Outreach Project <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: lightgray">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: lightgray">Data</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-        <div class="graphic" id="container"></div>
-        <div class="optionContainer">
-            <div class="geoOption" id="zipcodes" onclick="renderMap('zipcodes')">
-                <div class="geoOptionText">Zipcodes</div>
-            </div>
-            <div class="geoOption" id="districts" onclick="renderMap('districts')">
-                <div class="geoOptionText">Districts</div>
-            </div>
-            <div class="geoOption" id="sectors" onclick="renderMap('sectors')">
-                <div class="geoOptionText">Sectors</div>
-            </div>
-            <div class="geoOption" id="beats" onclick="renderMap('beats')">
-                <div class="geoOptionText">Beats</div>
-            </div>
-        </div>
-    </div>
+    </nav>
 
-    <div class="container mt-lg-3">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="header-content">
-                    <h1>Gun Violence Outreach Allocation Dashboard</h1>
-                </div>
-            </div>
-        </div>
+    <div class="container mt-lg-3" style="padding-top: 20px;">
         <div class="row">
             <div class="col-md-12">
                 <div class="sidebar-content">
                     <div class="row">
-                        <div class="col-md-6">
+
+                        <div class="col-md-4">
                             <div class="graphicOptions">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="optionText">Select a Geographic Division: </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="optionText">Drop Down Menu</div>
+                                <div class="optionText">Select Map Options: </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2-5">
+                            <div class="graphicOptions">
+                                <div class="btn-group dropright" >
+                                    <button type="button" class="btn btn-secondary dropdown-toggle geoOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Geographic Division
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" id='policeBeatsOption' onclick="renderChloropleth('policeBeats')">Police Beats</a>
+                                        <a class="dropdown-item" id='zipcodesOption' onclick="renderChloropleth('zipcodes')">Zip Codes</a>
+                                        <a class="dropdown-item" id="districtsOption" onclick="renderChloropleth('districts')">Districts</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="graphicOptions"></div>
+
+                        <div class="col-md-2-5">
+                            <div class="graphicOptions">
+                                <div class="btn-group dropright" >
+                                    <button type="button" class="btn btn-secondary dropdown-toggle geoOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Data Types
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" id='other1' onclick="">Homicides</a>
+                                        <a class="dropdown-item" id='other2' onclick="">Shootings</a>
+                                        <a class="dropdown-item" id="other3" onclick="">Current Outreach</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="graphicOptions"></div>
+
+                        <div class="col-md-4">
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -168,7 +119,7 @@
                 <div class="main-content" id="graphicContainer"></div>
             </div>
             <div class="col-md-4">
-                <div class="main-content"></div>
+                <div class="main-content" id="infoDisplay"></div>
             </div>
         </div>
     </div>
