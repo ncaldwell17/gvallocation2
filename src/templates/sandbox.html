@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sandbox</title>
+    <link rel="stylesheet" href="../static/graphic.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../static/makemap.js"></script>
+    <script src="../static/submit.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            color: white;
+        }
+        #infoDisplay {
+            border: 3px solid lightgray;
+            height: 600px;
+        }
+
+        .sidebar-title {
+            border-bottom: 2px solid white;
+            text-align: center;
+            font-size: 30px;
+        }
+        .sidebar-subtitle {
+            font-size: 22px;
+            text-align: center;
+            font-weight: bolder;
+            background-color: gray;
+        }
+
+        .info-text {
+            font-size: 12px;
+        }
+        .infographic {
+            margin-top: 20px;
+        }
+        .icon-square {
+            text-align: center;
+            font-size: 25px;
+        }
+        .infonumeral {
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-4">
+        <div id="infoDisplay">
+            <div class="row">
+                <div class="col-md-10 mx-auto sidebar-title">N3 Geographic Division Profiles</div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 mx-auto sidebar-subtitle">Beat 66</div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 mx-auto" style="text-align: center; margin-top: 10px">
+                    <i class="fas fa-info-circle info-text">This infographic dynamically displays demographic, economic, and outreach data for each geographic division.</i>
+                </div>
+            </div>
+            <div class="row infographic">
+                <div class="col-md-12 mx-auto icon-square">
+                    <i class="fas fa-dollar-sign" style="font-size: 40px; margin-right: 10px;"></i> Economic Information
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mx-auto infonumeral">
+                    <b>25%</b> below Poverty Line<br>
+                    <b>44%</b> currently Unemployed<br>
+                    <b>8%</b> currently Homeless<br>
+                </div>
+            </div>
+            <div class="row infographic">
+                <div class="col-md-12 mx-auto icon-square">
+                    <i class="fas fa-user" style="font-size: 40px; margin-right: 10px;"></i> Demographic Information
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mx-auto infonumeral">
+                    <b>22%</b> White <br>
+                    <b>54%</b> Black <br>
+                    <b>18%</b> Hispanic <br>
+                </div>
+            </div>
+            <div class="row infographic">
+                <div class="col-md-12 mx-auto icon-square">
+                    <i class="fas fa-hands-helping" style="font-size: 40px; margin-right: 10px;"></i> Outreach Information
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mx-auto infonumeral">
+                    <b>14</b> Current Outreach Workers
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

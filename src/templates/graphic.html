@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
 
     <style>
@@ -31,12 +33,26 @@
             color: #54278f;
         }
 
+        .fa {
+            margin-top: 20px;
+            float: left;
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        .fa:hover {
+            color: orangered;
+            transition: .5s;
+            cursor: pointer;
+        }
+
 
 
     </style>
 </head>
 <!-- <body onload="renderMap('chicago')"> -->
 <body>
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #54278f">
         <a class="navbar-brand" href="#">
             <div id="gvLogo"></div>
@@ -63,6 +79,7 @@
             </form>
         </div>
     </nav>
+    <!-- Header -->
 
     <div class="container mt-lg-3" style="padding-top: 20px;">
         <div class="row">
@@ -79,7 +96,7 @@
                         <div class="col-md-2-5">
                             <div class="graphicOptions">
                                 <div class="btn-group dropright" >
-                                    <button type="button" class="btn btn-secondary dropdown-toggle geoOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button id="geoDivisionButton" type="button" class="btn btn-secondary dropdown-toggle geoOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Geographic Division
                                     </button>
                                     <div class="dropdown-menu">
@@ -119,11 +136,67 @@
                 <div class="main-content" id="graphicContainer"></div>
             </div>
             <div class="col-md-4">
-                <div class="main-content" id="infoDisplay"></div>
+                <!-- Insert Sidebar Here -->
+
+                <div id="infoDisplay">
+
+                </div>
+
+
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-4" style="background-color: #54278f; margin-top: 50px; color: white;">
+
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Northwestern Neighborhood & Network Initiative</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+                        repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+                        harum esse fugiat. Itaque, culpa?</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">Share on Social Media</h5>
+                    <div class="fa fa-facebook"></div>
+                    <div class="fa fa-instagram"></div>
+                    <div class="fa fa-twitter"></div>
+
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://sites.northwestern.edu/n3lab/"> N3 Initiative</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 
 </body>
 </html>
