@@ -95,7 +95,7 @@ function create_markup(data) {
         <div class="col-md-10 mx-auto sidebar-title">N3 Geographic Division Profiles</div>
     </div>
     <div class="row">
-        <div class="col-md-10 mx-auto sidebar-subtitle">${data.properties.BEAT_ID}</div>
+        <div class="col-md-10 mx-auto sidebar-subtitle">${data.properties.geographic_delimiter}</div>
     </div>
     <div class="row">
         <div class="col-md-10 mx-auto" style="text-align: center; margin-top: 10px">
