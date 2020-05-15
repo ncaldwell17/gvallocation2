@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sandbox</title>
+    <title>Alt Front Page</title>
     <link rel="stylesheet" href="../static/graphic.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
@@ -24,166 +24,31 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
 
 
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../static/altMain.css">
+
+    <script>
+        let zipcodes = false;
+        let districts = false;
+        let beats = false;
+
+        let recent_homicides = false;
+        let recent_shootings = false;
+        let current_outreach = false;
+        let risk_scores = false;
+
+        let total_workers = 0;
+        let optimal_outreach = 0;
+    </script>
+
+
     <style>
         body {
             margin: 0;
         }
-        #title {
-            border-radius: 2px;
-            background-color: #300053;
-        }
-        #preferences {
-            height: 100vh;
-            background-image: linear-gradient(to bottom, indigo, #9300ff, indigo);
-            border-radius: 2px;
-        }
-        #dashboard {
-            height: 100vh;
-            background-color: #bebebe;
-            border-radius: 2px;
-        }
-        .visualAppeal {
-            border-radius: 5px;
-        }
-        #mapContainer {
-            height: 600px;
-            background-color: #ebedee;
-            border: 1px solid gray;
-            margin-top: 20px;
-        }
-        .sectionTitle {
-            height: 25px;
-            background-color: darkgray;
-            border-bottom: 1px solid gray;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            padding-left: 10px;
-            font-weight: bold;
-        }
-        .mapInfo {
-            height: 200px;
-            background-color: #ebedee;
-            border: 1px solid gray;
-        }
-        #preferencesTitle {
-            height: 100px;
-            width: 110%;
-            margin-left: -15px;
-        }
-        .preferencesSubtitle {
-            height: 20px;
-            background-color: #300053;
-            color: white;
-            padding-left: 10px;
-            font-weight: bold;
-            font-size: 14px;
-            width: 110%;
-            margin-left: -15px;
-            margin-top: 10px;
-        }
-        .preferencesOption {
-            height: 50px;
-            border-bottom: 1px solid gray;
-            width: 110%;
-            margin-left: -15px;
-            color: white;
-            font-size: 25px;
-            text-align: center;
-            padding-top: 5px;
-        }
-        .preferencesOption:hover {
-            background-color: #bebebe;
-            cursor: pointer;
-            color: black;
-            transition: .2s;
-        }
-        .checkbox {
-            margin-top: 20px;
-        }
-        /* The container */
-        .check-container {
-            color: white;
-            display: block;
-            position: relative;
-            text-align: center;
-            padding-left: 20px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        /* Hide the browser's default checkbox */
-        .check-container input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-        /* Create a custom checkbox */
-        .checkmark {
-            position: absolute;
-            top: 5px;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: #eee;
-            margin-left: 20px
-        }
-        .check-container:hover input ~ .checkmark {
-            background-color: #ccc;
-        }
-        .check-container input:checked ~ .checkmark {
-            background-color: #300053;
-        }
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-        /* Show the checkmark when checked */
-        .check-container input:checked ~ .checkmark:after {
-            display: block;
-        }
-        /* Style the checkmark/indicator */
-        .check-container .checkmark:after {
-            left: 9px;
-            top: 8px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-        input[type=text] {
-            width: 60%;
-            height: 30px;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        #userInputSubmit {
-            height: 30px;
-            background-color: #300053;
-            width: 60%;
-            margin: 20px auto;
-            text-align: center;
-            padding-top: 3px;
-            color: white;
-            font-weight: bold;
-        }
-        #userInputSubmit:hover {
-            cursor: pointer;
-
-        }
     </style>
+
+
 </head>
 <body>
     <div id="main" class="container-fluid">
@@ -235,9 +100,9 @@
 
                 <div class="row container" style="margin-top: 10px">
                     <div class="col-md-2 visualAppeal" style="height: 25px; background-color: white;
-border: 1px solid gray;"></div>
+    border: 1px solid gray;"></div>
                     <div class="col-md-2 visualAppeal" style="height: 25px;
-                    background-color: white; border: 1px solid gray;"></div>
+                        background-color: white; border: 1px solid gray;"></div>
                     <div class="col-md-auto offset-md-2">N3 Initiative Demo Dashboard</div>
                 </div>
 
@@ -267,6 +132,5 @@ border: 1px solid gray;"></div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
