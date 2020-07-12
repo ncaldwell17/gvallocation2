@@ -67,6 +67,12 @@
     color: black;
     transition: .2s;
 }
+
+.activeGeo {
+    background-color: #bebebe;
+    color: black;
+}
+
 .checkbox {
     margin-top: 20px;
 }

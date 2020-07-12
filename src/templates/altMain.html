@@ -24,21 +24,32 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
 
 
-    <!-- Main Stylesheet -->
+    <!-- Main Stylesheet & JS -->
     <link rel="stylesheet" href="../static/altMain.css">
+    <script src="../static/altMain.js"></script>
 
     <script>
-        let zipcodes = false;
-        let districts = false;
-        let beats = false;
+        let user_input = {
+            Zipcodes: false,
+            Districts: false,
+            Beats: false,
+            RecentHomicides: false,
+            RecentShootings: false,
+            CurrentOutreach: false,
+            RiskScores: false,
+            TotalWorkers: 0,
+            OptimalOutreach: 0
+        }
 
-        let recent_homicides = false;
-        let recent_shootings = false;
-        let current_outreach = false;
-        let risk_scores = false;
+        function printConsole() {
+            console.log(user_input);
+        }
 
-        let total_workers = 0;
-        let optimal_outreach = 0;
+        function newInput(input_dict) {
+
+        }
+
+
     </script>
 
 
@@ -55,12 +66,15 @@
         <div class="row">
             <div class="col-md-1" id="title"></div>
 
-            <div class="col-md-3" id="preferences">
+            <div class="col-md-3" id="preferences" onclick="printConsole()">
                 <div id="preferencesTitle"></div>
                 <div class="preferencesSubtitle">Geographic Divisions</div>
-                <div class="preferencesOption">Zip Codes</div>
-                <div class="preferencesOption">Districts</div>
-                <div class="preferencesOption">Police Beats</div>
+                <div id="geoPreferenceContainer">
+                    <div class="preferencesOption" id="geoZipcodes">Zip Codes</div>
+                    <div class="preferencesOption" id="geoDistricts">Districts</div>
+                    <div class="preferencesOption" id="geoBeats">Police Beats</div>
+                </div>
+
                 <div class="preferencesSubtitle">Type of Gun Violence Data</div>
                 <div class="checkbox">
                     <label class="check-container">Recent Homicides
@@ -89,7 +103,7 @@
                 <div class="preferencesSubtitle">User Inputs</div>
                 <form class="inputBox" style="text-align: center">
                     <label for="totalOutreach" style="margin-top: 10px; color: white">Total Outreach Workers</label>
-                    <input type="text" id="totalOutreach" name="tOutreach">
+                    <input type="text" id="totalOutreach" name="tOutreach" onchange="printConsole()">
                     <label for="optOutreach" style="margin-top: 10px; color: white;">Optimal Outreach per Division</label>
                     <input type="text" id="optOutreach" name="oOutreach">
                 </form>
